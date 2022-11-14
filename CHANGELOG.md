@@ -1,3 +1,15 @@
+# v0.0.3 (Mon Nov 14 2022)
+
+#### ⚠️ Pushed to `main`
+
+- reduce supervisord config noise, include template ([@chrisjsimpson](https://github.com/chrisjsimpson))
+
+#### Authors: 1
+
+- [@chrisjsimpson](https://github.com/chrisjsimpson)
+
+---
+
 # v0.0.2 (Mon Nov 14 2022)
 
 #### ⚠️ Pushed to `main`
