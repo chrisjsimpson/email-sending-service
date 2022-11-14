@@ -1,0 +1,11 @@
+services:
+  app:
+    image: container-cwvjxo
+    build:
+      context: ./src
+    ports:
+      - "5000:5000"
+    volumes:
+      - type: bind
+        source: ./src/web
+        target: /usr/src/app
