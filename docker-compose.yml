@@ -1,5 +1,8 @@
 services:
   app:
+    # For local testing email posting network_mode is set to host
+    # See push-emails.sh
+    network_mode: host
     image: container-cwvjxo
     build:
       context: ./src
