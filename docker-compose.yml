@@ -1,5 +1,7 @@
 services:
   app:
+    env_file:
+      - .env
     # For local testing email posting network_mode is set to host
     # See push-emails.sh
     network_mode: host
