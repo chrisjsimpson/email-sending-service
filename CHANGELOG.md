@@ -1,3 +1,15 @@
+# v0.0.2 (Mon Nov 14 2022)
+
+#### ⚠️ Pushed to `main`
+
+- add incron & supervisord ([@chrisjsimpson](https://github.com/chrisjsimpson))
+
+#### Authors: 1
+
+- [@chrisjsimpson](https://github.com/chrisjsimpson)
+
+---
+
 # v0.0.1 (Mon Nov 14 2022)
 
 :tada: This release contains work from a new contributor! :tada:
