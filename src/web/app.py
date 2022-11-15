@@ -14,7 +14,7 @@ load_dotenv(verbose=True)
 EMAIL_FOLDER = os.getenv("EMAIL_FOLDER", None)
 
 
-app = APIFlask(__name__)
+app = APIFlask(__name__, docs_ui="elements")
 app.teardown_appcontext(close_db)
 
 
