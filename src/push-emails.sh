@@ -17,6 +17,6 @@ echo Running push-emails as "$(whoami)"
 for EMAIL in $(find "$PATH_TO_EMAILS" -type f)
 do
   # listen on host example: nc -k -l 1234
-  curl --max-time 2 -v --data-binary @"$EMAIL" $EMAIL_API_ENDPOINT
+  curl --max-time 2 -v --data-urlencode email@"$EMAIL" $EMAIL_API_ENDPOINT
   rm $EMAIL
 done
