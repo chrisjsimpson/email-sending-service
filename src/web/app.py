@@ -1,5 +1,5 @@
-from flask import render_template
-from apiflask import APIFlask, Schema
+from flask import render_template, jsonify
+from apiflask import APIFlask, Schema, HTTPTokenAuth
 from apiflask.fields import String, List, Email
 from db import get_db, close_db
 import sqlalchemy
@@ -15,6 +15,7 @@ EMAIL_FOLDER = os.getenv("EMAIL_FOLDER", None)
 
 
 app = APIFlask(__name__, docs_ui="elements")
+auth = HTTPTokenAuth()
 app.teardown_appcontext(close_db)
 
 
@@ -27,6 +28,20 @@ class Email(Schema):
     BCC = List(Email, required=False)
 
 
+class User():
+    def get_roles(self):
+        return ["api_user"]
+
+@auth.verify_token
+def verify_token(token):
+    return User()
+
+
+
+@auth.get_user_roles
+def get_user_roles(user):
+    return user.get_roles()
+
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -34,6 +49,7 @@ def index():
 
 @app.post("/send-email")
 @app.input(Email, location="json")
+@app.auth_required(auth, roles="api_user")
 def send_email(email):
     msg = EmailMessage()
     msg.set_content(email["BODY"])
@@ -47,22 +63,40 @@ def send_email(email):
 
 
 @app.route("/health")
+@app.auth_required(auth)
 def health():
     log.info("Checking /health")
-    db = get_db()
-    health = "BAD"
+    error = False
+    msg = "OK"
+    try:
+        db = get_db()
+    except ValueError as e:
+        error = True
+        msg = f"Database likely invalid config {e}"
+        return return_error(msg)
+
     try:
         result = db.execute("SELECT NOW()")
         result = result.one()
-        health = "OK"
         log.info(
             f"/health reported OK including database connection: {result}"
         )  # noqa: E501
     except sqlalchemy.exc.OperationalError as e:
+        error = True
         msg = f"sqlalchemy.exc.OperationalError: {e}"
         log.error(msg)
+        return_error(msg)
     except Exception as e:
+        error = True
         msg = f"Error performing healthcheck: {e}"
         log.error(msg)
+        return_error(msg)
 
-    return health
+    if error:
+        return return_error(msg)
+
+    return jsonify(health)
+
+
+def return_error(msg, error_code=500):
+    return jsonify(msg), error_code
