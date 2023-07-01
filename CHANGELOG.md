@@ -1,3 +1,20 @@
+# v0.0.4 (Tue Nov 15 2022)
+
+#### ⚠️ Pushed to `main`
+
+- Update .autorc ([@chrisjsimpson](https://github.com/chrisjsimpson))
+- elements ui ([@chrisjsimpson](https://github.com/chrisjsimpson))
+- send email api ([@chrisjsimpson](https://github.com/chrisjsimpson))
+- use --data-urlencode to appease flask ([@chrisjsimpson](https://github.com/chrisjsimpson))
+- ability to set EMAIL_API_ENDPOINT ([@chrisjsimpson](https://github.com/chrisjsimpson))
+- push-emails.sh wip ([@chrisjsimpson](https://github.com/chrisjsimpson))
+
+#### Authors: 1
+
+- [@chrisjsimpson](https://github.com/chrisjsimpson)
+
+---
+
 # v0.0.3 (Mon Nov 14 2022)
 
 #### ⚠️ Pushed to `main`
