@@ -1,6 +1,6 @@
 from flask import render_template
 from apiflask import APIFlask, Schema
-from apiflask.fields import String
+from apiflask.fields import String, List, Email
 from db import get_db, close_db
 import sqlalchemy
 from logger import log
@@ -19,10 +19,12 @@ app.teardown_appcontext(close_db)
 
 
 class Email(Schema):
-    SUBJECT = String(required=True)
-    FROM = String(required=True)
-    TO = String(required=True)
-    BODY = String(required=True)
+    SUBJECT = String(required=False)
+    FROM = Email(required=True)
+    TO = List(Email, required=False)  # Either TO or BCC is required
+    BODY = String(required=False)
+    CC = List(Email, required=False)
+    BCC = List(Email, required=False)
 
 
 @app.route("/")
@@ -31,8 +33,8 @@ def index():
 
 
 @app.post("/send-email")
-@app.input(Email)
-def queue_email(email):
+@app.input(Email, location="json")
+def send_email(email):
     msg = EmailMessage()
     msg.set_content(email["BODY"])
 
@@ -41,7 +43,7 @@ def queue_email(email):
     msg["To"] = email["TO"]
     with open(f"{EMAIL_FOLDER}{time()}", "w") as fp:
         fp.write(msg.as_string())
-    return "OK"
+    return {"response": "OK. Email submitted"}
 
 
 @app.route("/health")
