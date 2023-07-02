@@ -1,3 +1,17 @@
+# v0.0.9 (Sun Jul 02 2023)
+
+#### ⚠️ Pushed to `main`
+
+- deploy.yml container-4gkc8bo -> email-sending-service ([@chrisjsimpson](https://github.com/chrisjsimpson))
+- Merge branch 'main' of github.com:chrisjsimpson/container-cwvjxo ([@chrisjsimpson](https://github.com/chrisjsimpson))
+- add amber.yaml ([@chrisjsimpson](https://github.com/chrisjsimpson))
+
+#### Authors: 1
+
+- [@chrisjsimpson](https://github.com/chrisjsimpson)
+
+---
+
 # v0.0.8 (Sun Jul 02 2023)
 
 #### ⚠️ Pushed to `main`
