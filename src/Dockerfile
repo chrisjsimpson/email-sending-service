@@ -11,6 +11,9 @@ COPY ./entrypoint.sh /
 
 COPY incron.allow /etc/incron.allow
 
+COPY cron-mail /etc/cron.d/cron-mail
+RUN crontab /etc/cron.d/cron-mail
+
 RUN adduser -g '' -D mailbox
 
 USER mailbox
