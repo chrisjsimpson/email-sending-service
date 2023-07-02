@@ -1,3 +1,18 @@
+# v0.0.5 (Sun Jul 02 2023)
+
+#### ⚠️ Pushed to `main`
+
+- update readme ([@chrisjsimpson](https://github.com/chrisjsimpson))
+- skaffold authentication and roles ([@chrisjsimpson](https://github.com/chrisjsimpson))
+- Merge branch 'main' of github.com:chrisjsimpson/container-cwvjxo ([@chrisjsimpson](https://github.com/chrisjsimpson))
+- wip send email schema ([@chrisjsimpson](https://github.com/chrisjsimpson))
+
+#### Authors: 1
+
+- [@chrisjsimpson](https://github.com/chrisjsimpson)
+
+---
+
 # v0.0.4 (Tue Nov 15 2022)
 
 #### ⚠️ Pushed to `main`
