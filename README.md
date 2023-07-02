@@ -11,6 +11,13 @@ cd src/web
 flask run
 ```
 
+## Podman setup
+
+```
+. venv/bin/activate
+pip install https://github.com/containers/podman-compose/archive/devel.tar.gz
+```
+
 ## Docs
 Full api docs:
 ```
