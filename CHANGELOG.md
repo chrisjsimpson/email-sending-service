@@ -1,3 +1,20 @@
+# v0.0.6 (Sun Jul 02 2023)
+
+#### ⚠️ Pushed to `main`
+
+- create deploy.yml workflow ([@chrisjsimpson](https://github.com/chrisjsimpson))
+- create autorc release.yml workflow ([@chrisjsimpson](https://github.com/chrisjsimpson))
+- reset automation ([@chrisjsimpson](https://github.com/chrisjsimpson))
+- create .issue_template ([@chrisjsimpson](https://github.com/chrisjsimpson))
+- Merge branch 'main' of github.com:chrisjsimpson/container-cwvjxo ([@chrisjsimpson](https://github.com/chrisjsimpson))
+- reset deploy automation ([@chrisjsimpson](https://github.com/chrisjsimpson))
+
+#### Authors: 1
+
+- [@chrisjsimpson](https://github.com/chrisjsimpson)
+
+---
+
 # v0.0.5 (Sun Jul 02 2023)
 
 #### ⚠️ Pushed to `main`
