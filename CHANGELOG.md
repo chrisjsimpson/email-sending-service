@@ -1,3 +1,16 @@
+# v0.0.8 (Sun Jul 02 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Merge branch 'main' of github.com:chrisjsimpson/container-cwvjxo ([@chrisjsimpson](https://github.com/chrisjsimpson))
+- chmod deploy.sh ([@chrisjsimpson](https://github.com/chrisjsimpson))
+
+#### Authors: 1
+
+- [@chrisjsimpson](https://github.com/chrisjsimpson)
+
+---
+
 # v0.0.7 (Sun Jul 02 2023)
 
 #### ⚠️ Pushed to `main`
