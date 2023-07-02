@@ -14,8 +14,8 @@ jobs:
     env:
       RUNNING_WITHIN_CI_PIPELINE: 1
       GIT_USERNAME_OR_ORG: chrisjsimpson
-      GIT_REPO_NAME: container-4gkc8bo
-      APP_NAME: container-4gkc8bo
+      GIT_REPO_NAME: email-sending-service
+      APP_NAME: email-sending-service
       SSH_CONFIG_FILE: /dev/null
       AMBER_SECRET: ${{ secrets.AMBER_SECRET }}
       DOKKU_SSH_PRIVATE_KEY: ${{ secrets.DOKKU_SSH_PRIVATE_KEY}}
